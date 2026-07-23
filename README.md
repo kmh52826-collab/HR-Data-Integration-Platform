@@ -68,7 +68,7 @@ To resolve **data fragmentation** issues in a large-scale enterprise environment
 ### Key Layers & Engineering Rationales
 
 #### 🟫 Bronze (Raw Zone)
-* **Role:** A repository for unprocessed raw data collected from heterogeneous source systems (various ERPs).
+* **Role:** A repository for unprocessed raw data collected from heterogeneous source systems.
 * **Engineering Rationale (Why):** By preserving source data without modification, we clarified the **data lineage**. This ensures **fault tolerance** and the ability to re-process data at any time without reconnecting to source systems in the event of changes in analysis requirements or system failures.
 
 #### 🌫️ Silver (Validated Zone)
