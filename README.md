@@ -69,17 +69,17 @@ To resolve **data fragmentation** issues in a large-scale enterprise environment
 
 #### 🟫 Bronze (Raw Zone)
 * **Role:** A repository for unprocessed raw data collected from heterogeneous source systems.
-* **Engineering Rationale (Why):** By preserving source data without modification, we clarified the **data lineage**. This ensures **fault tolerance** and the ability to re-process data at any time without reconnecting to source systems in the event of changes in analysis requirements or system failures.
+* **Engineering Rationale:** By preserving source data without modification, we clarified the **data lineage**. This ensures **fault tolerance** and the ability to re-process data at any time without reconnecting to source systems in the event of changes in analysis requirements or system failures.
 
 #### 🌫️ Silver (Validated Zone)
 * **Role:** A repository where cleansing, validation, and standardization are complete.
 * **Key Process:** Data cleansing, deduplication, schema enforcement, and MDM mapping.
-* **Engineering Rationale (Why):** This is the core stage of **data standardization**, uniting data from subsidiaries with different code systems into a group standard. By performing strict quality verification in this layer, we prevent data errors from propagating to lower analysis stages and maximize the **data reliability** of the entire platform.
+* **Engineering Rationale:** This is the core stage of **data standardization**, uniting data from subsidiaries with different code systems into a group standard. By performing strict quality verification in this layer, we prevent data errors from propagating to lower analysis stages and maximize the **data reliability** of the entire platform.
 
 #### 🟨 Gold (Enriched Zone)
 * **Role:** An analysis-optimized data repository reflecting business logic (HR Fact Tables).
 * **Key Process:** Complex joins, aggregation, and data modeling for insight derivation.
-* **Engineering Rationale (Why):** Designed to guarantee **high-performance query response times** in actual analytical environments like Power BI dashboards. By reconstructing normalized data for specific analytical purposes (denormalization), we built **high-quality data assets** that provide immediate and accurate insights to users.
+* **Engineering Rationale:** Designed to guarantee **high-performance query response times** in actual analytical environments like Power BI dashboards. By reconstructing normalized data for specific analytical purposes (denormalization), we built **high-quality data assets** that provide immediate and accurate insights to users.
 
 ---
 ## 🏗️ How the Gold Table is Built
