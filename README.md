@@ -34,7 +34,7 @@ To resolve **data fragmentation** issues in a large-scale enterprise environment
 ---
 ## 🏗️ Overall System Architecture
 <img width="2559" height="174" alt="image" src="https://github.com/user-attachments/assets/3302ae1d-ea9d-41f5-82c3-b81828ddb2df" />
-<img width="2557" height="1436" alt="image" src="https://github.com/user-attachments/assets/e139007a-e937-48eb-9394-d13fa95a388d" />
+<img width="2559" height="1439" alt="image" src="https://github.com/user-attachments/assets/3b8d6561-a2f4-45cf-ab0f-a7e2602692fb" />
 
 ---
 ## 🏗️ Azure Data Factory Pipeline
@@ -86,7 +86,7 @@ To resolve **data fragmentation** issues in a large-scale enterprise environment
 <img width="1907" height="1375" alt="image" src="https://github.com/user-attachments/assets/99fd3a36-cf82-4487-8e65-55638f3d321a" />
 
 ### 📌 Overview
-* **Core Objective:** Integrate source data bifurcated into System B and System A to build 7 types of analysis-optimized **HR Fact Tables**.
+* **Core Objective:** Integrate source data bifurcated into System A(Standard ERP) and System B(Integrated Legacy) to build 7 types of analysis-optimized **HR Fact Tables**.
 * **Architecture:** Located in the **Gold Layer** of the Databricks Medallion Architecture and stored in Azure ADLS Gen2 in Delta Lake format.
 * **Key Value:** Provides a single view of fragmented personnel information based on the enterprise-integrated employee identifier (`EMP_ID`), maximizing analytical efficiency.
 
