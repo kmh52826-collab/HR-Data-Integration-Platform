@@ -86,7 +86,7 @@ To resolve **data fragmentation** issues in a large-scale enterprise environment
 <img width="1907" height="1375" alt="image" src="https://github.com/user-attachments/assets/99fd3a36-cf82-4487-8e65-55638f3d321a" />
 
 ### 📌 Overview
-* **Core Objective:** Integrate source data bifurcated into System B (White) and System A (3 Dozons) to build 7 types of analysis-optimized **HR Fact Tables**.
+* **Core Objective:** Integrate source data bifurcated into System B and System A to build 7 types of analysis-optimized **HR Fact Tables**.
 * **Architecture:** Located in the **Gold Layer** of the Databricks Medallion Architecture and stored in Azure ADLS Gen2 in Delta Lake format.
 * **Key Value:** Provides a single view of fragmented personnel information based on the enterprise-integrated employee identifier (`EMP_ID`), maximizing analytical efficiency.
 
