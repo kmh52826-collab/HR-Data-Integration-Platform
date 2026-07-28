@@ -83,7 +83,7 @@ To resolve **data fragmentation** issues in a large-scale enterprise environment
 
 ---
 ## 🏗️ How the Gold Table is Built
-<img width="1907" height="1375" alt="image" src="https://github.com/user-attachments/assets/99fd3a36-cf82-4487-8e65-55638f3d321a" />
+<img width="1947" height="1395" alt="image" src="https://github.com/user-attachments/assets/410e07ec-26b4-49ec-9ac0-374fb33ef5b3" />
 
 ### 📌 Overview
 * **Core Objective:** Integrate source data bifurcated into System A(Standard ERP) and System B(Integrated Legacy) to build 7 types of analysis-optimized **HR Fact Tables**.
