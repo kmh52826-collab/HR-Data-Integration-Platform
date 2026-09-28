@@ -1,5 +1,5 @@
 # 🌐 HR Data Integration Platform
-### Enterprise-Unified Analytics for Global Subsidiaries
+### Enterprise-Unified Analytics for Group Subsidiaries
 
 > **This is an end-to-end data engineering solution designed to integrate and standardize heterogeneous HR data across more than 10 subsidiaries.**
 >
@@ -44,7 +44,7 @@ To resolve **data fragmentation** issues in a large-scale enterprise environment
 
 ### Step 1. Contextual Observability (Logging)
 * **Process:** At the start of the pipeline, the `SP_INS_RAW_PIP_INFO` procedure is called to generate a unique Execution ID and log the session context.
-* **Engineering Rationale:** By automating **state tracking** and **audit trails** in a large-scale distributed environment, we achieved full system **observability**. This design is intended to identify bottlenecks within complex pipelines and maximize debugging efficiency.
+* **Engineering Rationale:** By automating **state tracking** and **audit trails** in a large-scale distributed environment, we improved system **observability**. This design is intended to identify bottlenecks within complex pipelines and maximize debugging efficiency.
 
 ### Step 2. Abstracted Orchestration (Dynamic)
 * **Process:** Dynamically queries the list of sources and metadata to be processed at runtime through the `Get_Order_List` (Lookup) step.
@@ -153,7 +153,7 @@ Utilizing Gold Layer data built via the ETL pipeline, I implemented **analytical
 Through this project, I resolved technical debt and built an enterprise environment capable of data-driven HR strategy establishment.
 
 * **Establishment of Single Source of Truth (SSOT)**: Standardized fragmented personnel data from over 10 subsidiaries around the enterprise-integrated employee ID (`EMP_ID`), completing a reliable single source with ensured data consistency.
-* **Drastic Reduction in Analysis Lead Time**: Replaced manual aggregation processes for each subsidiary, which previously took days, with automated **Gold Layer**-based queries, improving the speed of company-wide personnel status and turnover rate analysis to near real-time levels.
+* **Drastic Reduction in Analysis Lead Time**: Replaced manual aggregation processes for each subsidiary with automated **Gold Layer**-based queries, significantly shortening the time required for company-wide personnel status and turnover rate analysis.
 * **Cost Optimization & Technical Independence**: Built a **self-developed MDM engine** utilizing existing infrastructure (BI-Matrix) instead of expensive commercial MDM solutions, reducing project costs and achieving technical internalization capable of agile responses to internal requirements.
 * **Strengthened Security & Governance**: Established a security system for sensitive personnel information through data modeling applying **Row-Level Security (RLS)** and implemented systematic data governance via the Medallion Architecture.
 
@@ -176,3 +176,4 @@ Through this project, I resolved technical debt and built an enterprise environm
 │   ├── 01.MDM_Overview.md
 │   └── 02.JScript.js
 └── README.md              # Project overview and guide
+```
