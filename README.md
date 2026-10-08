@@ -1,4 +1,4 @@
-# 🌐 HR Data Integration Platform
+# HR Data Integration Platform
 ### Enterprise-Unified Analytics for Group Subsidiaries
 
 > **This is an end-to-end data engineering solution designed to integrate and standardize heterogeneous HR data across more than 10 subsidiaries.**
@@ -21,7 +21,7 @@ To resolve **data fragmentation** issues in a large-scale enterprise environment
 
 ---
 
-### **🛠 Tech Stack**
+### **Tech Stack**
 
 | Category | Technologies |
 | :--- | :--- |
@@ -32,12 +32,12 @@ To resolve **data fragmentation** issues in a large-scale enterprise environment
 | **Languages** | Python, SQL, JavaScript |
 
 ---
-## 🏗️ Overall System Architecture
+## Overall System Architecture
 <img width="2559" height="174" alt="image" src="https://github.com/user-attachments/assets/3302ae1d-ea9d-41f5-82c3-b81828ddb2df" />
 <img width="2559" height="1439" alt="image" src="https://github.com/user-attachments/assets/3b8d6561-a2f4-45cf-ab0f-a7e2602692fb" />
 
 ---
-## 🏗️ Azure Data Factory Pipeline
+## Azure Data Factory Pipeline
 <img width="2556" height="745" alt="image" src="https://github.com/user-attachments/assets/e070fd3e-ed81-49df-8362-7b3167d40fd0" />
 
 > ### I engineered this **Metadata-Driven Dynamic Pipeline** to ensure high scalability and automated observability.
@@ -60,7 +60,7 @@ To resolve **data fragmentation** issues in a large-scale enterprise environment
 
 ### 🔗 **[View Detailed procedure (SP_INS_RAW_PIP_INFO.sql)](ETL/sql-procedure/SP_INS_RAW_PIP_INFO.sql)**
 ---
-## 🏗️ Databricks Medallion Architecture
+## Databricks Medallion Architecture
 <img width="1594" height="691" alt="image" src="https://github.com/user-attachments/assets/e7d8f702-4eec-4337-9232-270f544aa38a" />
 
 > To integrate fragmented data from over 10 subsidiaries and ensure reliability across the system, I designed the **Medallion Architecture**. Beyond simply moving data, I established a staged verification system to achieve both data governance and integrity.
@@ -82,15 +82,15 @@ To resolve **data fragmentation** issues in a large-scale enterprise environment
 * **Engineering Rationale:** Designed to guarantee **high-performance query response times** in actual analytical environments like Power BI dashboards. By reconstructing normalized data for specific analytical purposes (denormalization), we built **high-quality data assets** that provide immediate and accurate insights to users.
 
 ---
-## 🏗️ How the Gold Table is Built
+## How the Gold Table is Built
 <img width="1947" height="1395" alt="image" src="https://github.com/user-attachments/assets/410e07ec-26b4-49ec-9ac0-374fb33ef5b3" />
 
-### 📌 Overview
+### Overview
 * **Core Objective:** Integrate source data bifurcated into System A(Standard ERP) and System B(Integrated Legacy) to build 7 types of analysis-optimized **HR Fact Tables**.
 * **Architecture:** Located in the **Gold Layer** of the Databricks Medallion Architecture and stored in Azure ADLS Gen2 in Delta Lake format.
 * **Key Value:** Provides a single view of fragmented personnel information based on the enterprise-integrated employee identifier (`EMP_ID`), maximizing analytical efficiency.
 
-### 🎯 Scope
+### Scope
 We selected 7 key areas of personnel administration and designed/implemented fact tables to facilitate history tracking and analysis.
 
 | Category | Table Name | Key Attributes |
@@ -108,10 +108,10 @@ We selected 7 key areas of personnel administration and designed/implemented fac
 
 ---
 
-## 🏗️ How I Integrated Code Across Different Systems
+## How I Integrated Code Across Different Systems
 <img width="1273" height="869" alt="image" src="https://github.com/user-attachments/assets/7833de2e-086c-4181-bc0c-879901f7e304" />
 
-### ✅ Heterogeneous Data Integration & Master Data Management (MDM)
+### Heterogeneous Data Integration & Master Data Management (MDM)
 
 #### To integrate the diverse data schemas of over 10 subsidiaries into a single standard, I self-designed and implemented an independent MDM engine utilizing existing infrastructure.
 
@@ -130,25 +130,25 @@ We selected 7 key areas of personnel administration and designed/implemented fac
 > **BI-Matrix**: A specialized Low-code Business Intelligence (BI) platform used to rapidly design data interfaces and implement complex business logic.
 
 ---
-## 🌟 Data Visualization & Analytical Modeling
+## Data Visualization & Analytical Modeling
 > ### This is one of the analytical dashboards I developed during the HR project
 <img width="2553" height="1193" alt="image" src="https://github.com/user-attachments/assets/cda8124d-cfbb-4c2c-90cf-5264a828f4a3" />
 <img width="2262" height="1431" alt="image" src="https://github.com/user-attachments/assets/78cdb405-8282-4a5d-a09d-54d86a2acc8e" />
 
 Utilizing Gold Layer data built via the ETL pipeline, I implemented **analytical dashboards** and an **optimized data model (Star Schema)** to support personnel decision-making.
 
-### 📈 Employee Turnover Analysis Dashboard
+### Employee Turnover Analysis Dashboard
 * **Insight-Driven Design**: Real-time monitoring of company-wide turnover rates and average tenure to identify workforce loss risks early.
 * **Multidimensional Analysis**: Provides cross-analysis capabilities by subsidiary, job rank, and reason for turnover to support data-driven HR strategy development.
 
-### 📐 Star Schema Data Modeling (ERD)
+### Star Schema Data Modeling (ERD)
 * **Optimization for BI**: Designed a **Star Schema** structure that clearly separates Fact and Dimension tables for efficient processing of large-scale HR data in the Power BI environment.
 * **Data Integrity**: Normalized complex relationships such as personnel appointments (`f_hr_appoint_history`) and organizational information around `f_hr_employee_history` in a 1:N structure to ensure query performance and data consistency.
 * **Row-Level Security (RLS)**: Architected the model to enable data access control (`m_org_info_rls`) based on user permissions, considering the sensitivity of personnel data.
 
 ---
 
-## 🏆 Key Accomplishments & Business Impact
+## Key Accomplishments & Business Impact
 
 Through this project, I resolved technical debt and built an enterprise environment capable of data-driven HR strategy establishment.
 
@@ -157,7 +157,7 @@ Through this project, I resolved technical debt and built an enterprise environm
 * **Cost Optimization & Technical Independence**: Built a **self-developed MDM engine** utilizing existing infrastructure (BI-Matrix) instead of expensive commercial MDM solutions, reducing project costs and achieving technical internalization capable of agile responses to internal requirements.
 * **Strengthened Security & Governance**: Established a security system for sensitive personnel information through data modeling applying **Row-Level Security (RLS)** and implemented systematic data governance via the Medallion Architecture.
 
-## 💡 Lessons Learned
+## Lessons Learned
 
 * **Complexity of Heterogeneous Data Integration**: I deeply realized that in the process of aligning source systems with different business logics into a single standard, **domain knowledge sharing and communication** with business departments are as important as technical implementation.
 * **Importance of Scalability-Oriented Design**: While building the metadata-driven dynamic pipeline in ADF, I felt how significantly **decoupling** at the initial design stage impacts future system scalability and maintenance costs.
